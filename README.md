@@ -1,7 +1,7 @@
 # DockersInfo
 ## Cmds - Dockers
 
-# Docker object type
+### Docker object type
 *	Containers
 *	Images
 *	Plugins
@@ -16,7 +16,7 @@
 **docker -help**	Muestra la ayuda de Dockers
 
 
-**Management Commands:**
+### Management Commands:
 | Command | Comment |
 | - | - |
 |builder	|Manage builds|
@@ -37,7 +37,8 @@
 |volume	|Manage volumes|
 
 
-**Commands**
+
+### Commands
 | Command | Comment |
 | - | - |
 |attach	|Attach local standard input, output, and error streams to a running container|
@@ -81,3 +82,48 @@
 |version	|Show the Docker version information|
 |wait	|Block until one or more containers stop, then print their exit codes|
 
+
+## Management Commands:
+
+### builder
+Manage builds
+
+__Sintaxis__
+```bash
+Usage:  docker builder COMMAND
+
+Commands:
+  build       Build an image from a Dockerfile
+  prune       Remove build cache
+```
+
+### build
+Build an image from a Dockerfile
+```bash
+docker builder build [OPTIONS] PATH | URL | -
+```
+### prune
+Remove build cache
+```bash
+docker builder prune
+```
+### config
+Manage Docker configs
+```bash
+docker config COMMAND
+```
+### create
+Create a config from a file or STDIN
+```bash
+docker config create [OPTIONS] CONFIG file|-
+```
+### inspect
+Display detailed information on one or more configs
+```bash
+docker config inspect [OPTIONS] CONFIG [CONFIG...]
+```
+### ls
+List configs
+```bash
+docker config ls [OPTIONS]
+```
