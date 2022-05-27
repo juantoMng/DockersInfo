@@ -180,8 +180,9 @@ docker container exec [OPTIONS] CONTAINER COMMAND [ARG...]
 
 ### export
 Export a container’s filesystem as a tar archive
-Export a container’s filesystem as a tar archive !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+```bash
+docker container export [OPTIONS] CONTAINER
+```
 
 ### inspect
 Display detailed information on one or more containers
@@ -212,4 +213,83 @@ Pause all processes within one or more containers
 ```bash
 docker container pause CONTAINER [CONTAINER...]
 ```
+
+### port
+List port mappings or a specific mapping for the container
+```bash
+docker container port CONTAINER [PRIVATE_PORT[/PROTO]]
+```
+
+### prune
+Remove all stopped containers
+```bash
+docker container prune [OPTIONS]
+```
+### rename
+Rename a container
+```bash
+docker container rename CONTAINER NEW_NAME
+```
+
+### restart
+Restart one or more containers
+```bash
+docker container restart [OPTIONS] CONTAINER [CONTAINER...]
+```
+
+### rm
+Remove one or more containers
+```bash
+docker container rm [OPTIONS] CONTAINER [CONTAINER...]
+
+
+### run
+Run a command in a new container
+```bash
+docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
+```
+
+### start
+Start one or more stopped containers
+```bash
+docker container start [OPTIONS] CONTAINER [CONTAINER...]
+```
+
+### stats
+Display a live stream of container(s) resource usage statistics
+```bash
+docker container stats [OPTIONS] [CONTAINER...]
+```
+
+### stop
+Stop one or more running containers
+```bash
+docker container stop [OPTIONS] CONTAINER [CONTAINER...]
+```
+
+### top
+Display the running processes of a container
+```bash
+docker container top CONTAINER [ps OPTIONS]
+```
+
+### unpause
+Unpause all processes within one or more containers
+```bash
+docker container unpause CONTAINER [CONTAINER...]
+```
+
+### update
+Update configuration of one or more containers
+```bash
+docker container update [OPTIONS] CONTAINER [CONTAINER...]
+```
+
+### wait
+Block until one or more containers stop, then print their exit codes
+```bash
+docker container wait CONTAINER [CONTAINER...]
+```
+
+
 
