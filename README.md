@@ -127,3 +127,89 @@ List configs
 ```bash
 docker config ls [OPTIONS]
 ```
+### rm
+Remove one or more configs
+docker config rm CONFIG [CONFIG...]
+
+Example
+```bash
+docker config rm my_config
+```
+
+## container
+Manage containers
+Sintaxis
+```bash
+docker container COMMAND
+```
+### attach
+Attach local standard input, output, and error streams to a running container
+```bash
+docker container attach [OPTIONS] CONTAINER
+```
+
+### commit
+Create a new image from a container’s changes
+```bash
+docker container commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+```
+
+### cp
+Copy files/folders between a container and the local filesystem
+```bash
+docker container cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+```
+
+### create
+Create a new container
+```bash
+docker container create [OPTIONS] IMAGE [COMMAND] [ARG...]
+```
+
+### diff
+Inspect changes to files or directories on a container’s filesystem
+```bash
+docker container diff CONTAINER
+```
+
+### exec
+Run a command in a running container
+```bash
+docker container exec [OPTIONS] CONTAINER COMMAND [ARG...]
+```
+
+### export
+Export a container’s filesystem as a tar archive
+Export a container’s filesystem as a tar archive !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+### inspect
+Display detailed information on one or more containers
+```bash
+docker container inspect [OPTIONS] CONTAINER [CONTAINER...]
+```
+
+### kill
+Kill one or more running containers
+```bash
+docker container kill [OPTIONS] CONTAINER [CONTAINER...]
+```
+
+### logs
+Fetch the logs of a container
+```bash
+docker container logs [OPTIONS] CONTAINER
+```
+
+### ls
+List containers
+```bash
+docker container ls [OPTIONS]
+```
+
+### pause
+Pause all processes within one or more containers
+```bash
+docker container pause CONTAINER [CONTAINER...]
+```
+
