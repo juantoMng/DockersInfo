@@ -241,7 +241,7 @@ docker container restart [OPTIONS] CONTAINER [CONTAINER...]
 Remove one or more containers
 ```bash
 docker container rm [OPTIONS] CONTAINER [CONTAINER...]
-
+```
 
 ### run
 Run a command in a new container
@@ -291,5 +291,109 @@ Block until one or more containers stop, then print their exit codes
 docker container wait CONTAINER [CONTAINER...]
 ```
 
+## context
+Manage contexts
+Sintaxis
+```bash
+docker context COMMAND
+```
+### create
+Create a context
+```bash
+docker context create [OPTIONS] CONTEXT
+```
 
+### export
+Export a context to a tar or kubeconfig file
+```bash
+docker context export [OPTIONS] CONTEXT [FILE|-]
+```
+### import
+Import a context from a tar or zip file
+```bash
+docker context import CONTEXT FILE|-
+```
+### inspect
+Display detailed information on one or more contexts
+```bash
+docker context inspect [OPTIONS] [CONTEXT] [CONTEXT...]
+```
+### ls
+List contexts
+```bash
+docker context ls [OPTIONS]
+```
+
+### rm
+Remove one or more contexts
+```bash
+docker context rm CONTEXT [CONTEXT...]
+```
+### update
+Update a context
+```bash
+docker context update [OPTIONS] CONTEXT
+```
+### use
+Set the current docker context
+```bash
+docker context use CONTEXT
+```
+
+### cp
+Copy files/folders between a container and the local filesystem
+```bash
+docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+```
+
+### create
+
+Create a new container
+```bash
+docker create [OPTIONS] IMAGE [COMMAND] [ARG...]
+```
+
+### diff
+Inspect changes to files or directories on a container’s filesystem
+```bash
+docker diff CONTAINER
+```
+
+### events
+Get real time events from the server
+```bash
+docker events [OPTIONS]
+```
+
+### exec
+Run a command in a running container
+```bash
+docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+```
+Example
+```bash
+docker run --name ubuntu_bash --rm -i -t ubuntu bash
+
+docker exec -d ubuntu_bash touch /tmp/execWorks
+```
+
+export
+Export a container’s filesystem as a tar archive
+```bash
+docker export [OPTIONS] CONTAINER
+```
+Example
+```bash
+docker export red_panda > latest.tar
+docker export --output="latest.tar" red_panda
+```
+### history
+Show the history of an image
+```bash
+docker history [OPTIONS] IMAGE
+```
+Example
+```bash
+docker history docker
+```
 
